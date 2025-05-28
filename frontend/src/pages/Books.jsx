@@ -28,10 +28,11 @@ const Books = () => {
     } finally {
       setLoading(false);
     }
-    useEffect(() => {
+  };
+
+  useEffect(() => {
     fetchRandomBooks();
   }, []);
-  };
 
   const searchBooks = async () => {
     if (!searchQuery.trim()) return;
@@ -46,9 +47,7 @@ const Books = () => {
       setLoading(false);
     }
   };
-  useEffect(() => {
-    fetchRandomBooks();
-  }, []);
+
   return (
     <Container maxWidth="lg" sx={{ mt: 4 }}>
       <Typography variant="h4" gutterBottom>
@@ -96,6 +95,5 @@ const Books = () => {
     </Container>
   );
 };
-
 
 export default Books;
